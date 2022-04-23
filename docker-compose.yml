@@ -1,0 +1,19 @@
+version: "3.1"
+services:
+    mysql:
+        image: mysql:5.7
+        container_name: db
+        environment:
+            - MYSQL_ROOT_PASSWORD=root
+            - MYSQL_DATABASE=easyappointments
+        ports:
+            - "8001:3306"
+    server:
+        build: .
+        image: easyappointments-server:v1
+        container_name: easyappointments
+        ports:
+            - "8000:8888"
+        environment:
+          - DEBUG=true
+          - BASE_URL=http://localhost:8000
