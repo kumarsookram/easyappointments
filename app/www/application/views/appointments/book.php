@@ -117,13 +117,12 @@
     </div>
 </nav>
 <?php if (! empty($website_images)): ?>
-<section class="bg-<?= $text_color === 'white' ? 'light' : 'dark' ?>">
+<section class="bg-light">
     <div class="container">
         <div class="row align-items-center pt-5" style="min-height: 450px;">
             <div class="col-lg-6 d-md-none d-lg-block text-lg-left text-center pl-5 pb-5">
                 <h1 style="font-size: 5rem;"><?= $website_title ?></h1>
                 <h3 class="text-muted mb-5"><?= $website_description ?></h3>
-                <button class="btn-lg btn-<?= $website_theme_color ?>" href="#book-appointment-wizard"><?= lang('page_title')?></button>
             </div>
             <div class="col-lg-6 col-md-12">
                 <div id="carousel" class="carousel slide" data-interval="false">
@@ -166,10 +165,12 @@
     </div>
 </section>
 <?php endif ?>
-<section class="bg-<?= $text_color === 'white' ? 'light' : 'dark' ?>">
+<section class="bg-light">
     <div class="container py-5">
         <div class="col-12">
-            <h1><?= lang('make_appointment') ?></h1>
+            <span class="text-<?= $text_color ?>" id="company-name">
+                <?= lang('make_appointment') ?>
+            </span>
             <div id="book-appointment-wizard" class="color-<?= $website_theme_color ?> mt-3 mx-auto col-12 col-lg-10">
                 <!-- FRAME TOP BAR -->
                 <div id="header" class="bg-<?= $website_theme_color ?> border border-<?= $website_theme_color ?>">
@@ -571,11 +572,11 @@
     </div>
 </section>
 
-<section class="bg-<?= $text_color === 'white' ? 'light' : 'dark' ?>">
-    <div class="container py-2">
-        <div class="row">
-            <div class="col-lg-3 col-8">
-                <h1 class="text-center mb-3"><i class="fa-solid fa-clock mr-2"></i><?= lang('schedule') ?></h1>
+<section class="bg-light">
+    <div class="container pt-2 pb-5">
+        <div class="row justify-content-around align-items-center">
+            <div class="col-lg-3 col-md-5 col-sm-8 col-9">
+                <h3 class="text-center mb-3"><i class="fa-solid fa-clock mr-2"></i><?= lang('schedule') ?></h3>
                 <?php foreach ($company_working_plan as $day => $wp): ?>
                     <div class="row">
                         <div class="col-4 text-left">
@@ -591,7 +592,7 @@
                     </div>
                 <?php endforeach ?>
             </div>
-            <div class="col-lg-9 col-12">
+            <div class="col-lg-8 col-md-7 col-12">
                 <?php if (isset($admin['address']) && $admin['address'] !== ''): ?>
                 <div class="my-3">
                     <div class="mapouter">

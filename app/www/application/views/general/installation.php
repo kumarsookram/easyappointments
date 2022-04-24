@@ -118,9 +118,6 @@
                     <label class="btn btn-info">
                         <input type="radio" name="theme-color" value="info" autocomplete="off"><img class="img-rounded" height="150px" src="<?= asset_url('assets/img/theme-colors/info.png') ?>" alt="Color blau clar">
                     </label>
-                    <label class="btn btn-light">
-                        <input type="radio" name="theme-color" value="light" autocomplete="off"><img class="img-rounded" height="150px" src="<?= asset_url('assets/img/theme-colors/light.png') ?>" alt="Color blanc">
-                    </label>
                     <label class="btn btn-dark">
                         <input type="radio" name="theme-color" value="dark" autocomplete="off"><img class="img-rounded" height="150px" src="<?= asset_url('assets/img/theme-colors/dark.png') ?>" alt="Color negre">
                     </label>

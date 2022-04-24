@@ -338,10 +338,6 @@
                                         <input class="form-check-input me-1" name="theme-color" type="radio" value="info" aria-label="Selecciona color <?= lang('color_info') ?>">
                                         <?= lang('color_info') ?>
                                     </label>
-                                    <label class="list-group-item list-group-item-light">
-                                        <input class="form-check-input me-1" name="theme-color" type="radio" value="light" aria-label="Selecciona color <?= lang('color_light') ?>">
-                                        <?= lang('color_light') ?>
-                                    </label>
                                     <label class="list-group-item list-group-item-dark">
                                         <input class="form-check-input me-1" name="theme-color" type="radio" value="dark" aria-label="Selecciona color <?= lang('color_dark') ?>">
                                         <?= lang('color_dark') ?>
