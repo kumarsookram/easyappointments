@@ -61,11 +61,6 @@
             </div>
 
             <div class="form-group">
-                <label for="phone-number" class="control-label">Número de mòbil</label>
-                <input type="text" id="phone-number" class="form-control"/>
-            </div>
-
-            <div class="form-group">
                 <label for="username" class="control-label">Nom d'usuari</label>
                 <input type="text" id="username" class="form-control"/>
             </div>
@@ -139,7 +134,12 @@
             </div>
 
             <div class="form-group">
-                <label for="company-link" class="control-label">Enllaç del web de l'empresa</label>
+                <label for="phone-number" class="control-label">Número de telèfon</label>
+                <input type="text" id="phone-number" class="form-control"/>
+            </div>
+
+            <div class="form-group">
+                <label for="company-link" class="control-label">Enllaç al web de l'empresa</label>
                 <input type="text" id="company-link" class="form-control"/>
             </div>
 
