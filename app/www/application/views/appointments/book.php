@@ -163,10 +163,9 @@
 <?php endif; ?>
 <?php if (isset($elfsight_review_code) && $elfsight_review_code !== ''): ?>
 <section class="bg-<?= $website_theme_color === 'light' ? 'dark text-white' : 'light' ?>">
-    <div class="container">
-        <?php
-            echo $elfsight_review_code;
-        ?>
+    <div class="container py-5">
+        <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+        <?= $elfsight_review_code ?>
     </div>
 </section>
 <?php endif ?>
@@ -673,7 +672,22 @@
                 <?php endif; ?>
             </div>
         </div>
-        <div class="row mt-3">
+        <?php if ($display_privacy_policy === '1' || $display_terms_and_conditions === '1'): ?>
+        <div class="row mt-2">
+            <div class="col text-right">
+                <?php if ($display_privacy_policy === '1'): ?>
+                <a href="#" class="text-<?= $text_color ?>" data-toggle="modal" data-target="#privacy-policy-modal"><?= lang('privacy_policy') ?></a>
+                <?php endif ?>
+                <?php if ($display_privacy_policy === '1' && $display_terms_and_conditions === '1'): ?>
+                |
+                <?php endif ?>
+                <?php if ($display_terms_and_conditions === '1'): ?>
+                <a href="#" class="text-<?= $text_color ?>" data-toggle="modal" data-target="#terms-and-conditions-modal"><?= lang('terms_and_conditions') ?></a>
+                <?php endif ?>
+            </div>
+        </div>
+        <?php endif ?>
+        <div class="row mt-2">
             <div class="col text-center">
                 Powered by <a href="https://www.elkaribu.com" target="_blank" style="color: #63ADF2;">elKaribu
                 <img class="pb-1" src="<?= base_url('assets/img/elkaribu-16x16.png') ?>" alt="elKaribu SL Logo"></a>
