@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,35 +15,6 @@
 
     <script src="<?= asset_url('assets/ext/fontawesome/js/fontawesome.min.js') ?>"></script>
     <script src="<?= asset_url('assets/ext/fontawesome/js/solid.min.js') ?>"></script>
-
-    <style>
-        .color-theme, #book-appointment-wizard .book-step strong, #book-appointment-wizard .active-step strong,
-        #book-appointment-wizard .captcha-title .fa-sync-alt:hover, .link {
-            color: <?= $website_theme_color ?> !important;
-        }
-        .bg-color-theme, #book-appointment-wizard #header,
-        #book-appointment-submit, #book-appointment-wizard #available-hours .selected-hour {
-            background-color: <?= $website_theme_color ?> !important;
-        }
-        .bg-theme {
-            background: <?= $website_theme_color ?> !important;
-        }
-        .border-theme, #book-appointment-submit, #book-appointment-wizard #available-hours .selected-hour {
-            border-color: <?= $website_theme_color ?> !important;
-        }
-        .darker-color-theme, #book-appointment-submit:hover, .link:hover {
-            color: <?= $darker_website_theme_color ?> !important;
-        }
-        .darker-bg-color-theme {
-            background-color: <?= $darker_website_theme_color ?> !important;
-        }
-        .darker-bg-theme {
-            background: <?= $darker_website_theme_color ?> !important;
-        }
-        .darker.border-theme, #book-appointment-submit:hover {
-            border-color: <?= $darker_website_theme_color ?> !important;
-        }
-    </style>
 </head>
 <body>
 <div id="main" class="container">
@@ -90,7 +61,7 @@
             <div class="mt-2">
                 <small>
                     Powered by
-                    <a href="https://easyappointments.org">Easy!Appointments</a>
+                    <a href="https://easyappointments.org" target="_blank">Easy!Appointments</a>
                     &amp;
                     <a href="https://www.elkaribu.com" target="_blank">elKaribu</a>
                 </small>
