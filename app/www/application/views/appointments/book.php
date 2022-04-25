@@ -47,20 +47,25 @@
     <!-- general -->
     <style>
         body .ui-datepicker td a, body .ui-datepicker td span {
-            color: <?= $website_theme_color ?> !important;
+            color: var(--<?= $website_theme_color ?>) !important;
         }
         body .ui-datepicker .ui-slider-handle  {
-            background-color: <?= $website_theme_color ?> !important;
+            background-color: var(--<?= $website_theme_color ?>) !important;
         }
         body .ui-datepicker .ui-widget-header, body .ui-datepicker th, html body .ui-datepicker td a.ui-state-active,
         body .ui-datepicker td a.ui-state-highlight  {
-            background: <?= $website_theme_color ?> !important;
+            background: var(--<?= $website_theme_color ?>) !important;
         }
         body .ui-widget.ui-widget-content {
-            border: 1px solid <?= $website_theme_color ?> !important;
+            border: 1px solid var(--<?= $website_theme_color ?>) !important;
         }
         body .ui-datepicker .ui-slider-handle {
-            border-color: <?= $website_theme_color ?> !important;
+            border-color: var(--<?= $website_theme_color ?>) !important;
+        }
+        #book-appointment-wizard #available-hours .selected-hour {
+            background-color: var(--<?= $website_theme_color ?>) !important;
+            border-color: var(--<?= $website_theme_color ?>) !important;
+            color: var(--<?= $text_color ?>) !important;
         }
     </style>
 </head>
@@ -168,12 +173,12 @@
 <section class="bg-light">
     <div class="container py-5">
         <div class="col-12">
-            <span class="text-<?= $text_color ?>" id="company-name">
-                <?= lang('make_appointment') ?>
-            </span>
             <div id="book-appointment-wizard" class="color-<?= $website_theme_color ?> mt-3 mx-auto col-12 col-lg-10">
                 <!-- FRAME TOP BAR -->
                 <div id="header" class="bg-<?= $website_theme_color ?> border border-<?= $website_theme_color ?>">
+                    <span class="text-<?= $text_color ?>" id="company-name">
+                        <?= lang('make_appointment') ?>
+                    </span>
                     <div id="steps">
                         <div id="step-1" class="book-step active-step"
                              data-tippy-content="<?= lang('service_and_provider') ?>">

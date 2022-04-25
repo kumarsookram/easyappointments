@@ -342,9 +342,8 @@ window.FrontendBook = window.FrontendBook || {};
          * for his appointment.
          */
         $('#available-hours').on('click', '.available-hour', function () {
-            var selected_hour_classes = 'selected-hour bg-' + GlobalVariables.website_theme_color + ' border border-' + GlobalVariables.website_theme_color;
-            $('.selected-hour').removeClass(selected_hour_classes);
-            $(this).addClass(selected_hour_classes);
+            $('.selected-hour').removeClass('selected-hour');
+            $(this).addClass('selected-hour');
             FrontendBook.updateConfirmFrame();
         });
 
