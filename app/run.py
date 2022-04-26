@@ -9,7 +9,7 @@ from functools import partial
 
 def main(argv):
     if os.environ['DEBUG'] == 'true':
-        debug_mode();
+        debug_mode()
     if os.path.exists('/app/start.sh'):
         os.system('sh /app/start.sh')
     os.system('php-fpm8 &')
@@ -27,4 +27,4 @@ def debug_mode():
     pass
 
 
-main(sys.argv);
+main(sys.argv)
