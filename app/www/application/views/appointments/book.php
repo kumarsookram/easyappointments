@@ -620,7 +620,7 @@
         <div class="row justify-content-center">
             <div class="col-md-3 col-sm-6 text-center">
                 <a href="/">
-                    <img src="<?= $website_logo ?>"  height="100" alt="<?= 'Logo de ' . $company_name ?>" loading="lazy">
+                    <img src="<?= $website_logo ?>"  height="130" alt="<?= 'Logo de ' . $company_name ?>" loading="lazy">
                 </a>
             </div>
             <div class="col-md-8 col-sm-12 col-10">
