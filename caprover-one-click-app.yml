@@ -1,0 +1,101 @@
+captainVersion: 4
+services:
+    # elKaribu Easy!Appointments
+    $$cap_appname:
+        depends_on:
+            - $$cap_appname-db
+        image: elkaribu/easyappointments:$$cap_app_version
+        restart: always
+        environment:
+            BASE_URL: http://$$cap_appname.$$cap_root_domain/
+            LANGUAGE: $$cap_app_language
+            DB_HOST: srv-captain--$$cap_appname-db
+            DB_NAME: $$cap_dbname
+            DB_USERNAME: $$cap_dbname
+            DB_PASSWORD: $$cap_dbpass
+            EMAIL_HOST: $$cap_email_server_host
+            EMAIL_USER: $$cap_email_server_user
+            EMAIL_PASSWORD: $$cap_email_server_password
+            EMAIL_CRYPTO: $$cap_email_server_crypto
+            EMAIL_PORT: $$cap_email_server_port
+            TZ: $$cap_app_tz
+        caproverExtra:
+            containerHttpPort: '8888'
+    # Database
+    $$cap_appname-db:
+        image: mysql:$$cap_mysql_version
+        volumes:
+            - $$cap_appname-db-data:/var/lib/mysql
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: $$cap_gen_random_hex(16)
+            MYSQL_DATABASE: $$cap_dbname
+            MYSQL_USER: $$cap_dbname
+            MYSQL_PASSWORD: $$cap_dbpass
+        caproverExtra:
+            notExposeAsWebApp: 'true'
+
+caproverOneClickApp:
+    variables:
+        - id: $$cap_app_version
+          label: elKaribu Easy!Appointments Version
+          defaultValue: 'latest'
+          description: Check out their docker page for the valid tags https://hub.docker.com/r/elkaribu/easyappointments/tags
+
+        - id: $$cap_mysql_version
+          label: MySQL Version
+          defaultValue: '5.7'
+          description: Check out their Docker page for the valid tags https://hub.docker.com/r/library/mysql/tags
+          validRegex: /^([^\s^\/])+$/
+
+        - id: $$cap_app_language
+          label: Language for the app
+          defaultValue: 'catalan'
+          description: Current possible values are either 'catalan' or 'spanish'
+
+        - id: $$cap_dbname
+          label: Database Name
+          defaultValue: 'easyappointments'
+          validRegex: /^([^\s^\/])+$/
+
+        - id: $$cap_dbpass
+          label: Database Password
+          defaultValue: $$cap_gen_random_hex(16)
+          validRegex: /^([^\s^\/])+$/
+
+        - id: $$cap_email_server_host
+          label: Email Server Host
+          description: OPTIONAL
+
+        - id: $$cap_email_server_port
+          label: Email Server Port
+          defaultValue: '587'
+
+        - id: $$cap_email_server_user
+          label: Email Server User
+          description: OPTIONAL
+
+        - id: $$cap_email_server_password
+          label: Email Server Password
+          description: OPTIONAL
+
+        - id: $$cap_email_server_crypto
+          label: SMTP cryptographic method
+          defaultValue: 'tls'
+          description: Use either 'tls' or 'ssl'
+
+        - id: $$cap_app_tz
+          label: Timezone of the providers
+          defaultValue: 'Europe/Madrid'
+
+    instructions:
+        start: >-
+            elKaribu Easy!Appointments is an open source basic website for little businesses.
+        end: >-
+            Done! 😄
+            Your service is available at http://$$cap_appname.$$cap_root_domain
+            Make sure to enable https on your domain
+    displayName: 'elKaribu Easy!Appointments'
+    isOfficial: false
+    description: elKaribu Easy!Appointments is an open source basic website to manage clients and appointments for little businesses.
+    documentation: https://easyappointments.org/
