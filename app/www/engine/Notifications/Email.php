@@ -154,7 +154,7 @@ class Email {
         ], TRUE);
 
         $mailer = $this->create_mailer();
-        $mailer->From = $settings['company_email'];
+        $mailer->From = $this->config['smtp_user'];
         $mailer->FromName = $settings['company_name'];
         $mailer->AddAddress($recipient_email->get());
         $mailer->Subject = $title->get();
@@ -257,7 +257,7 @@ class Email {
         $mailer = $this->create_mailer();
 
         // Send email to recipient.
-        $mailer->From = $settings['company_email'];
+        $mailer->From = $this->config['smtp_user'];
         $mailer->FromName = $settings['company_name'];
         $mailer->AddAddress($recipient_email->get()); // "Name" argument crushes the phpmailer class.
         $mailer->Subject = lang('appointment_cancelled_title');
@@ -291,7 +291,7 @@ class Email {
 
         $mailer = $this->create_mailer();
 
-        $mailer->From = $settings['company_email'];
+        $mailer->From = $this->config['smtp_user'];
         $mailer->FromName = $settings['company_name'];
         $mailer->AddAddress($recipientEmail->get()); // "Name" argument crushes the phpmailer class.
         $mailer->Subject = lang('new_account_password');
@@ -326,7 +326,7 @@ class Email {
         }
         if ($this->config['ignore_ssl'])
         {
-            $phpmailer->SMTPOptions = [
+            $mailer->SMTPOptions = [
                 'ssl' => [
                     'verify_peer' => false,
                     'verify_peer_name' => false,
