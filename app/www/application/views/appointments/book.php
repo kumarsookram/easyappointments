@@ -175,7 +175,7 @@
             <div id="book-appointment-wizard" class="color-<?= $website_theme_color ?> mt-3 mx-auto col-12 col-lg-10">
                 <!-- FRAME TOP BAR -->
                 <div id="header" class="bg-<?= $website_theme_color ?> border border-<?= $website_theme_color ?>">
-                    <span class="text-<?= $text_color ?>" id="company-name">
+                    <span class="text-<?= $text_color ?> font-weight-bold" id="company-name">
                         <?= lang('make_appointment') ?>
                     </span>
                     <div id="steps">
