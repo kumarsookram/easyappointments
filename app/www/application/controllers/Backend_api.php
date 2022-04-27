@@ -263,7 +263,7 @@ class Backend_api extends EA_Controller {
             // Save customer changes to the database.
             if ($this->input->post('customer_data'))
             {
-                $customer = json_decode($this->iznput->post('customer_data'), TRUE);
+                $customer = json_decode($this->input->post('customer_data'), TRUE);
 
                 $required_privileges = ( ! isset($customer['id']))
                     ? $this->privileges[PRIV_CUSTOMERS]['add']
