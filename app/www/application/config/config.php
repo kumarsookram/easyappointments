@@ -331,7 +331,7 @@ $config['global_xss_filtering'] = TRUE;
 | 'csrf_cookie_name' = The cookie name
 | 'csrf_expire' = The number in seconds the token should expire.
 */
-$config['csrf_protection'] = Config::CSRF_PROTECTION;;
+$config['csrf_protection'] = Config::CSRF_PROTECTION;
 $config['csrf_token_name'] = 'csrfToken';
 $config['csrf_cookie_name'] = 'csrfCookie';
 $config['csrf_expire'] = 31557600;

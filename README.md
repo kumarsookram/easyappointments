@@ -23,13 +23,14 @@ docker-compose up
 | -------------------------- | ----------------------- |
 | BASE_URL                   | "http://localhost:8888" |
 | LANGUAGE                   | "catalan"               |
-| CSRF_PROTECTION            | true                    |
-| DEBUG                      | false                   |
+| CSRF_PROTECTION            | TRUE                    |
+| EMAIL_IGNORE_SSL           | FALSE                   |
+| DEBUG                      | FALSE                   |
 | DB_HOST                    | "db"                    |
 | DB_NAME                    | "easyappointments"      |
 | DB_USERNAME                | "root"                  |
 | DB_PASSWORD                | "hellodocker"           |
-| GOOGLE_SYNC_FEATURE        | false                   |
+| GOOGLE_SYNC_FEATURE        | FALSE                   |
 | GOOGLE_PRODUCT_NAME        |                         |
 | GOOGLE_CLIENT_ID           |                         |
 | GOOGLE_CLIENT_SECRET       |                         |

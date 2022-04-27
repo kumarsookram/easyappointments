@@ -64,6 +64,7 @@ class Config {
     const EMAIL_PASSWORD = '${EMAIL_PASSWORD}';
     const EMAIL_CRYPTO = '${EMAIL_CRYPTO}';
     const EMAIL_PORT = ${EMAIL_PORT}; // 465 or 587
+    const EMAIL_IGNORE_SSL = ${EMAIL_IGNORE_SSL}; // Enter TRUE or FALSE
 }
 
 /* End of file config.php */

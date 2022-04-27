@@ -14,3 +14,4 @@ $config['smtp_user'] = Config::EMAIL_USER;
 $config['smtp_pass'] = Config::EMAIL_PASSWORD;
 $config['smtp_crypto'] = Config::EMAIL_CRYPTO; // 'ssl' or 'tls'
 $config['smtp_port'] = Config::EMAIL_PORT; // 25, 465 or 587
+$config['ignore_ssl'] = Config::EMAIL_IGNORE_SSL;
