@@ -8,7 +8,7 @@ services:
         restart: always
         environment:
             BASE_URL: http://$$cap_appname.$$cap_root_domain
-            DEBUG: false
+            DEBUG: 'false'
             LANGUAGE: $$cap_app_language
             DB_HOST: srv-captain--$$cap_appname-db
             DB_NAME: $$cap_dbname
