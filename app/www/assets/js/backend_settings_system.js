@@ -133,7 +133,12 @@
         settings.push({
             name: 'theme_color',
             value: $("input:radio[name='theme-color']:checked").val()
-        })
+        });
+
+        settings.push({
+            name: 'font_family',
+            value: $("input:radio[name='font-family']:checked").val()
+        });
 
         settings.push({
             name: 'website_images',

@@ -74,6 +74,10 @@ window.BackendSettings = window.BackendSettings || {};
                $('input:radio[value="' + setting.value + '"]').prop("checked", true);
             }
 
+            if (setting.name === 'font_family') {
+               $('input:radio[value="' + setting.value + '"]').prop("checked", true);
+            }
+
             if (setting.name === 'website_images') {
                 websiteImages = $.parseJSON(setting.value);
             }

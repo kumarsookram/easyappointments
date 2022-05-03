@@ -57,8 +57,12 @@
                         'html': [
                             $('<input/>', {
                                 'id': index + '-website-image',
-                                'type': "text",
+                                'type': "hidden",
                                 'class': 'website-image-url form-control form-control-sm editable',
+                                'data-public-key': "8fa0bc9e7f65bd03a8d0",
+                                'data-images-only': true,
+                                'data-tabs': "file",
+                                'data-effects': "crop, flip, enhance, grayscale, blur, rotate, mirror, sharp, invert",
                                 'disabled': true
                             })
                         ]
@@ -91,16 +95,6 @@
                                 'html': [
                                     $('<span/>', {
                                         'class': 'fas fa-trash-alt'
-                                    })
-                                ]
-                            }),
-                            $('<button/>', {
-                                'type': 'button',
-                                'class': 'btn btn-outline-secondary btn-sm reset-website-image d-none',
-                                'title': EALang.undo,
-                                'html': [
-                                    $('<span/>', {
-                                        'class': 'fas fa-undo'
                                     })
                                 ]
                             }),
@@ -153,8 +147,13 @@
                     $('<td/>', {
                         'html': [
                             $('<input/>', {
-                                'id': $('.website-images tbody tr').length + '-start',
+                                'id': index + '-website-image',
+                                'type': "hidden",
                                 'class': 'website-image-url form-control form-control-sm editable',
+                                'data-public-key': "8fa0bc9e7f65bd03a8d0",
+                                'data-images-only': true,
+                                'data-tabs': "file",
+                                'data-effects': "crop, flip, enhance, grayscale, blur, rotate, mirror, sharp, invert",
                                 'disabled': false
                             })
                         ]
@@ -187,16 +186,6 @@
                                 'html': [
                                     $('<span/>', {
                                         'class': 'fas fa-trash-alt'
-                                    })
-                                ]
-                            }),
-                            $('<button/>', {
-                                'type': 'button',
-                                'class': 'btn btn-outline-secondary btn-sm reset-website-image d-none',
-                                'title': EALang.undo,
-                                'html': [
-                                    $('<span/>', {
-                                        'class': 'fas fa-undo'
                                     })
                                 ]
                             }),
@@ -251,7 +240,7 @@
             // Show save - cancel buttons.
             var $tr = $(this).closest('tr');
             $tr.find('.edit-website-image, .delete-website-image').addClass('d-none');
-            $tr.find('.reset-website-image, .save-website-image, .cancel-website-image').removeClass('d-none');
+            $tr.find('.save-website-image, .cancel-website-image').removeClass('d-none');
             $tr.find('select,input:text').addClass('form-control form-control-sm')
         });
 
@@ -263,19 +252,6 @@
         $(document).on('click', '.delete-website-image', function () {
             $(this).parent().parent().remove();
         });
-
-        /**
-         * Event: Reset/Undo Website Image Button "Click"
-         *
-         * Removes the editable values.
-         *
-         * @param {jQuery.Event} e
-         */
-        $(document).on('click', '.reset-website-image', function (event) {
-            var element = event.target;
-            var $modifiedRow = $(element).closest('tr');
-            $modifiedRow.find('.website-image-url').val("");
-        }.bind(this));
 
         /**
          * Event: Cancel Website Image Button "Click"
@@ -292,7 +268,7 @@
             this.enableCancel = false;
 
             $modifiedRow.find('.edit-website-image, .delete-website-image').removeClass('d-none');
-            $modifiedRow.find('.reset-website-image, .save-website-image, .cancel-website-image').addClass('d-none');
+            $modifiedRow.find('.save-website-image, .cancel-website-image').addClass('d-none');
         }.bind(this));
 
         /**
@@ -310,7 +286,7 @@
             $modifiedRow.find('.editable .submit-editable').trigger('click');
             this.enableSubmit = false;
 
-            $modifiedRow.find('.reset-website-image, .save-website-image, .cancel-website-image').addClass('d-none');
+            $modifiedRow.find('.save-website-image, .cancel-website-image').addClass('d-none');
             $modifiedRow.find('.edit-website-image, .delete-website-image').removeClass('d-none');
 
             $modifiedRow.find('.website-image-img').prop('src', $modifiedRow.find('.website-image-url').val());

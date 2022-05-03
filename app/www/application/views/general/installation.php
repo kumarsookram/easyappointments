@@ -6,11 +6,22 @@
 
     <title>Instal·lació | Easy!Appointments</title>
 
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto|Lato|Montserrat|Merriweather|Bitter|Lora|Inconsolata|Kalam">
     <link rel="stylesheet" type="text/css" href="<?= asset_url('assets/ext/bootstrap/css/bootstrap.min.css') ?>">
     <link rel="icon" type="image/x-icon" href="<?= asset_url('assets/img/favicon.ico') ?>">
     <link rel="stylesheet" type="text/css" href="<?= asset_url('assets/ext/jquery-ui/jquery-ui.min.css') ?>">
     <link rel="stylesheet" type="text/css" href="<?= asset_url('assets/css/installation.css') ?>">
     <link rel="stylesheet" type="text/css" href="<?= asset_url('assets/css/general.css') ?>">
+    <style>
+        .uploadcare--widget__button.uploadcare--widget__button_type_open {
+            background-color: #63adf2;
+        }
+    </style>
+    <script>
+        uploadcare.registerTab('preview', uploadcareTabEffects)
+        UPLOADCARE_LOCALE = "ca"
+    </script>
 </head>
 <body>
 <div id="loading" class="d-none">
@@ -88,8 +99,15 @@
             </div>
 
             <div class="form-group">
-                <label for="website-logo" class="control-label">Enllaç al logo de l'empresa</label>
-                <input type="text" id="website-logo" class="form-control"/>
+                <label for="website-logo" class="control-label">Logo de l'empresa</label>
+                <input
+                    type="hidden"
+                    role="uploadcare-uploader"
+                    data-public-key="8fa0bc9e7f65bd03a8d0"
+                    data-images-only="true"
+                    data-tabs="file"
+                    data-effects="crop, flip, enhance, grayscale, blur, rotate, mirror, sharp, invert"
+                />
             </div>
 
             <div class="form-group">
@@ -158,6 +176,43 @@
                 <input id="zip-code" class="form-control">
             </div>
 
+            <div class="form-group">
+                <label for="font-family"><?= lang('font_family') ?> *</label>
+                <div class="list-group">
+                    <label class="list-group-item">
+                        <input class="form-check-input me-1" name="font-family" type="radio" value="Roboto" style="font-family: Roboto;" aria-label="Selecciona fuente Roboto">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </label>
+                    <label class="list-group-item">
+                        <input class="form-check-input me-1" name="font-family" type="radio" value="Lato" style="font-family: Lato;" aria-label="Selecciona fuente Lato">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </label>
+                    <label class="list-group-item">
+                        <input class="form-check-input me-1" name="font-family" type="radio" value="Montserrat" style="font-family: Montserrat;" aria-label="Selecciona fuente Montserrat">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </label>
+                    <label class="list-group-item">
+                        <input class="form-check-input me-1" name="font-family" type="radio" value="Merriweather" style="font-family: Merriweather;" aria-label="Selecciona fuente Merriweather">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </label>
+                    <label class="list-group-item">
+                        <input class="form-check-input me-1" name="font-family" type="radio" value="Bitter" style="font-family: Bitter;" aria-label="Selecciona fuente Bitter">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </label>
+                    <label class="list-group-item">
+                        <input class="form-check-input me-1" name="font-family" type="radio" value="Lora" style="font-family: Lora;" aria-label="Selecciona fuente Lora">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </label>
+                    <label class="list-group-item">
+                        <input class="form-check-input me-1" name="font-family" type="radio" value="Inconsolata" style="font-family: Inconsolata;" aria-label="Selecciona fuente Inconsolata">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </label>
+                    <label class="list-group-item">
+                        <input class="form-check-input me-1" name="font-family" type="radio" value="Kalam" style="font-family: Kalam;" aria-label="Selecciona fuente Kalam">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </label>
+                </div>
+            </div>
         </div>
     </div>
 

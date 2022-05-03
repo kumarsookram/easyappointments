@@ -166,7 +166,8 @@ $(function () {
             website_description: $('#website-description').val(),
             website_logo: $('#website-logo').val(),
             website_images: "{}",
-            theme_color: $('input:radio[name="theme-color"]:checked').val()
+            theme_color: $('input:radio[name="theme-color"]:checked').val(),
+            font_family: $('input:radio[name="font-family"]:checked').val(),
         };
     }
 

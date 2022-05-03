@@ -98,6 +98,7 @@ class Installation extends EA_Controller {
             $this->settings_model->set_setting('website_logo', $webpage['website_logo']);
             $this->settings_model->set_setting('website_images', $webpage['website_images']);
             $this->settings_model->set_setting('theme_color', $webpage['theme_color']);
+            $this->settings_model->set_setting('font_family', $webpage['font_family']);
 
             // Service
             $service_id = $this->services_model->add([

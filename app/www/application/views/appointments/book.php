@@ -39,6 +39,7 @@
     <link rel="stylesheet" type="text/css" href="<?= asset_url('assets/css/frontend.css') ?>">
     <link rel="stylesheet" type="text/css" href="<?= asset_url('assets/css/general.css') ?>">
     <link rel="stylesheet" type="text/css" href="<?= asset_url('assets/ext/fontawesome/css/all.min.css') ?>">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=<?= $font_family ?>">
 
     <link rel="icon" type="image/x-icon" href="<?= $website_logo ?>">
 
@@ -46,6 +47,9 @@
     <script src="<?= asset_url('assets/ext/fontawesome/js/solid.min.js') ?>"></script>
     <!-- general -->
     <style>
+        body {
+            font-family: <?= $font_family ?>, Arial !important;
+        }
         body .ui-datepicker td a, body .ui-datepicker td span {
             color: var(--<?= $website_theme_color ?>) !important;
         }
@@ -78,7 +82,7 @@
             <img src="<?= $website_logo ?>"  height="80" alt="Logo de <?= $company_name ?>" loading="lazy">
         </a>
     </div>
-    <div class="col-md-4 col-6 text-center">
+    <div class="col-md-4 col-6 text-center py-3">
         <h1><?= $company_name ?></h1>
         <h5 class="d-none d-md-block"><?= $website_description ?></h5>
     </div>
@@ -86,13 +90,13 @@
         <div class="row float-right">
             <div class="col col-md-auto">
                 <?php if (isset($admin['mobile_number']) && $admin['mobile_number'] !== ''): ?>
-                    <div class="row"><i class="fab fa-whatsapp mr-2"></i><?= $admin['mobile_number'] ?></div>
+                    <div class="row align-items-center"><i class="fab fa-whatsapp mr-2"></i><?= $admin['mobile_number'] ?></div>
                 <?php endif ?>
                 <?php if (isset($admin['phone_number']) && $admin['phone_number'] !== ''): ?>
-                    <div class="row"><i class="fas fa-phone-alt mr-2"></i><?= $admin['phone_number'] ?></div>
+                    <div class="row align-items-center"><i class="fas fa-phone-alt mr-2"></i><?= $admin['phone_number'] ?></div>
                 <?php endif ?>
                 <?php if (isset($admin['email']) && $admin['email'] !== ''): ?>
-                    <div class="row"><i class="fas fa-envelope mr-2"></i><?= $admin['email'] ?></div>
+                    <div class="row align-items-center"><i class="fas fa-envelope mr-2"></i><?= $admin['email'] ?></div>
                 <?php endif ?>
                 <div class="row">
                     <?php if (isset($company_facebook_link) && $company_facebook_link !== ''): ?>
@@ -125,7 +129,7 @@
 <section class="bg-light">
     <div class="container">
         <div class="row align-items-center pt-5" style="min-height: 450px;">
-            <div class="col-lg-6 d-md-none d-lg-block text-lg-left text-center pl-5 pb-5">
+            <div class="col-lg-6 d-md-none d-lg-block text-lg-left text-center pl-lg-5 pb-5">
                 <h1 style="font-size: 5rem;"><?= $website_title ?></h1>
                 <h3 class="text-muted mb-5"><?= $website_description ?></h3>
             </div>
@@ -604,7 +608,7 @@
                             <style>iframe {width:100%;height:100%;}</style>
                             <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=<?= $admin['address'] ?>%20<?= $admin['city'] ?>%20<?= $admin['zip_code'] ?>&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                             <style>.mapouter{position:relative;text-align:right;height:500px;}</style>
-                            <style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;}</style>
+                            <style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;} #gmap_canvas{border-radius:1.5rem!important;}</style>
                         </div>
                     </div>
                 </div>
@@ -631,16 +635,16 @@
                 <div class="row">
                     <div class="col">
                         <?php if (isset($admin['mobile_number']) && $admin['mobile_number'] !== ''): ?>
-                            <div class="row mt-2"><i class="fab fa-whatsapp mr-2"></i><?= $admin['mobile_number'] ?></div>
+                            <div class="row mt-2 align-items-center"><i class="fab fa-whatsapp mr-2"></i><?= $admin['mobile_number'] ?></div>
                         <?php endif ?>
                         <?php if (isset($admin['phone_number']) && $admin['phone_number'] !== ''): ?>
-                            <div class="row mt-2"><i class="fas fa-phone-alt mr-2"></i><?= $admin['phone_number'] ?></div>
+                            <div class="row mt-2 align-items-center"><i class="fas fa-phone-alt mr-2"></i><?= $admin['phone_number'] ?></div>
                         <?php endif ?>
                         <?php if (isset($admin['email']) && $admin['email'] !== ''): ?>
-                            <div class="row mt-2"><i class="fas fa-envelope mr-2"></i><?= $admin['email'] ?></div>
+                            <div class="row mt-2 align-items-center"><i class="fas fa-envelope mr-2"></i><?= $admin['email'] ?></div>
                         <?php endif ?>
                         <?php if (isset($admin['address']) && $admin['address'] !== ''): ?>
-                            <div class="row mt-2"><i class="fa-solid fa-building mr-2"></i><?= $admin['address'] . ', ' . $admin['zip_code'] . ' ' . $admin['city'] ?></div>
+                            <div class="row mt-2 align-items-center"><i class="fa-solid fa-building mr-2"></i><?= $admin['address'] . ', ' . $admin['zip_code'] . ' ' . $admin['city'] ?></div>
                         <?php endif; ?>
                     </div>
                 </div>

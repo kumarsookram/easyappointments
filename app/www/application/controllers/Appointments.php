@@ -87,6 +87,7 @@ class Appointments extends EA_Controller {
             $company_facebook_link = $this->settings_model->get_setting('company_facebook_link');
             $company_twitter_link = $this->settings_model->get_setting('company_twitter_link');
             $elfsight_review_code = $this->settings_model->get_setting('elfsight_review_code');
+            $font_family = $this->settings_model->get_setting('font_family');
             $admin = $this->admins_model->get_batch()[0];
             $company_working_plan = json_decode($this->settings_model->get_setting('company_working_plan'), true);
             $text_color = $website_theme_color === 'warning' || $website_theme_color === 'light' ? 'dark' : 'white';
@@ -253,6 +254,7 @@ class Appointments extends EA_Controller {
                 'company_facebook_link' => $company_facebook_link,
                 'company_twitter_link' => $company_twitter_link,
                 'elfsight_review_code' => $elfsight_review_code,
+                'font_family' => $font_family,
                 'admin' => $admin,
                 'company_working_plan' => $company_working_plan
             ];
@@ -303,6 +305,7 @@ class Appointments extends EA_Controller {
             $website_description = $this->settings_model->get_setting('website_description');
             $website_images = json_decode($this->settings_model->get_setting('website_images'), true);
             $website_theme_color = $this->settings_model->get_setting('theme_color');
+            $font_family = $this->settings_model->get_setting('font_family');
             $seo_title = $this->settings_model->get_setting('seo_title');
             $seo_description = $this->settings_model->get_setting('seo_description');
             $company_instagram_link = $this->settings_model->get_setting('company_instagram_link');
@@ -324,6 +327,7 @@ class Appointments extends EA_Controller {
                 'website_description' => $website_description,
                 'website_images' => $website_images,
                 'website_theme_color' => $website_theme_color,
+                'font_family' => $font_family,
                 'seo_title' => $seo_title,
                 'seo_description' => $seo_description,
                 'company_instagram_link' => $company_instagram_link,
@@ -395,6 +399,7 @@ class Appointments extends EA_Controller {
         $website_description = $this->settings_model->get_setting('website_description');
         $website_images = json_decode($this->settings_model->get_setting('website_images'), true);
         $website_theme_color = $this->settings_model->get_setting('theme_color');
+        $font_family = $this->settings_model->get_setting('font_family');
         $seo_title = $this->settings_model->get_setting('seo_title');
         $seo_description = $this->settings_model->get_setting('seo_description');
         $company_instagram_link = $this->settings_model->get_setting('company_instagram_link');
@@ -472,6 +477,7 @@ class Appointments extends EA_Controller {
             'company_facebook_link' => $company_facebook_link,
             'company_twitter_link' => $company_twitter_link,
             'elfsight_review_code' => $elfsight_review_code,
+            'font_family' => $font_family,
             'admin' => $admin,
             'company_working_plan' => $company_working_plan,
             'text_color' => $text_color,

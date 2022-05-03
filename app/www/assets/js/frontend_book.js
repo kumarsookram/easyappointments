@@ -737,26 +737,33 @@ window.FrontendBook = window.FrontendBook || {};
         if (service.duration || Number(service.price) > 0 || service.location) {
             $('<br/>')
                 .appendTo($serviceDescription);
+            $('<ul>')
+                .appendTo($serviceDescription);
         }
 
         if (service.duration) {
-            $('<span/>', {
-                'text': '[' + EALang.duration + ' ' + service.duration + ' ' + EALang.minutes + ']'
+            $('<li/>', {
+                'text': EALang.duration + ' ' + service.duration + ' ' + EALang.minutes
             })
                 .appendTo($serviceDescription);
         }
 
         if (Number(service.price) > 0) {
-            $('<span/>', {
-                'text': '[' + EALang.price + ' ' + service.price + ' ' + service.currency + ']'
+            $('<li/>', {
+                'text': EALang.price + ' ' + service.price + ' ' + service.currency
             })
                 .appendTo($serviceDescription);
         }
 
         if (service.location) {
-            $('<span/>', {
-                'text': '[' + EALang.location + ' ' + service.location + ']'
+            $('<li/>', {
+                'text': EALang.location + ' ' + service.location
             })
+                .appendTo($serviceDescription);
+        }
+
+        if (service.duration || Number(service.price) > 0 || service.location) {
+            $('<ul>')
                 .appendTo($serviceDescription);
         }
     }

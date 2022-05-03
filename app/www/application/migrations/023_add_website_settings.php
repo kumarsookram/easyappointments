@@ -58,6 +58,10 @@ class Migration_Add_website_settings extends CI_Migration {
             'name' => 'elfsight_review_code',
             'value' => ''
         ]);
+        $this->db->insert('settings', [
+            'name' => 'font_family',
+            'value' => 'Arial'
+        ]);
     }
 
     public function down()
@@ -88,6 +92,9 @@ class Migration_Add_website_settings extends CI_Migration {
         ]);
         $this->db->delete('settings', [
             'name' => 'elfsight_review_code'
+        ]);
+        $this->db->delete('settings', [
+            'name' => 'font_family'
         ]);
     }
 }
