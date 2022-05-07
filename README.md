@@ -1,15 +1,15 @@
 # elKaribu Easy!Appointments
 
-Imatge Docker per l'ús de [Easy!Appointments](https://easyappointments.org/). A més, s'inclou una pàgina web funcional per a 
-qualsevol tipus d'establiment
+Imatge Docker per l'ús de [Easy!Appointments](https://easyappointments.org/), un sistema de gestió de clients i reserves online. A més, s'inclou una pàgina web funcional per a 
+qualsevol tipus d'establiment.
 
 ## Característiques
 
-* Pàgina web senzilla pel teu negoci sense gaire configuració
-* Gestió de cites i clients
-* Reserva de cites segons proveïdor i servei
-* Sistema de notificacions per correu
-* Diferents horaris per cada proveïdor
+* Pàgina web senzilla pel teu negoci sense gaire configuració.
+* Gestió de cites i clients.
+* Reserva de cites segons proveïdor i servei.
+* Sistema de notificacions per correu.
+* Diferents horaris per cada proveïdor.
 
 ## Instal·lació
 
@@ -50,11 +50,11 @@ docker-compose up
 
 ## Suport
 
-Envieu un correu a [info@elkaribu.com](mailto:info@elkaribu.com) o publiqueu un [issue](https://github.com/elkaribu/easyappointments/issues/new)
+Envieu un correu a [info@elkaribu.com](mailto:info@elkaribu.com) o publiqueu un [issue](https://github.com/elkaribu/easyappointments/issues/new).
 
 ## Llicència
 
-Codi sota la llicència [GPL v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html)
+Codi sota la llicència [GPL v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html).
 
 
 ## Crèdits
