@@ -35,13 +35,6 @@ window.BackendSettings = window.BackendSettings || {};
     exports.wp = {};
 
     /**
-     * Use this WebsiteImages class instance to perform actions on the page's website images table.
-     *
-     * @type {WebsiteImages}
-     */
-    exports.wi = {};
-
-    /**
      * Tab settings object.
      *
      * @type {Object}
@@ -60,7 +53,6 @@ window.BackendSettings = window.BackendSettings || {};
 
         // Apply setting values from database.
         var workingPlan = {};
-        var websiteImages = {};
 
         GlobalVariables.settings.system.forEach(function (setting) {
             $('input[data-field="' + setting.name + '"]').val(setting.value);
@@ -76,10 +68,6 @@ window.BackendSettings = window.BackendSettings || {};
 
             if (setting.name === 'font_family') {
                $('input:radio[value="' + setting.value + '"]').prop("checked", true);
-            }
-
-            if (setting.name === 'website_images') {
-                websiteImages = $.parseJSON(setting.value);
             }
 
             if (setting.name === 'customer_notifications') {
@@ -139,9 +127,6 @@ window.BackendSettings = window.BackendSettings || {};
         exports.wp.setup(workingPlan);
         exports.wp.timepickers(false);
 
-        exports.wi = new WebsiteImages();
-        exports.wi.setup(websiteImages);
-
         // Load user settings into form
         $('#user-id').val(GlobalVariables.settings.user.id);
         $('#first-name').val(GlobalVariables.settings.user.first_name);
@@ -190,7 +175,6 @@ window.BackendSettings = window.BackendSettings || {};
      */
     function bindEventHandlers() {
         exports.wp.bindEventHandlers();
-        exports.wi.bindEventHandlers();
 
         /**
          * Event: Tab "Click"

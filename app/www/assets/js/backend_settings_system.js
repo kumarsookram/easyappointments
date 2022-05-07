@@ -60,10 +60,6 @@
                 var workingPlan = BackendSettings.wp.get();
                 BackendSettings.wp.setup(workingPlan);
                 BackendSettings.wp.timepickers(false);
-
-                // We need to refresh the website images.
-                var websiteImages = BackendSettings.wi.get();
-                BackendSettings.wi.setup(websiteImages);
             });
     };
 
@@ -123,7 +119,7 @@
 
         // Website Tab
 
-        $('#website').find('input, select').not('input:checkbox, input:radio, .website-image-url').each(function (index, field) {
+        $('#website').find('input, select').not('input:checkbox, input:radio').each(function (index, field) {
             settings.push({
                 name: $(field).attr('data-field'),
                 value: $(field).val()
@@ -138,11 +134,6 @@
         settings.push({
             name: 'font_family',
             value: $("input:radio[name='font-family']:checked").val()
-        });
-
-        settings.push({
-            name: 'website_images',
-            value: JSON.stringify(BackendSettings.wi.get())
         });
 
         // Business Logic Tab
