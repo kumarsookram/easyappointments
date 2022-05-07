@@ -79,7 +79,6 @@ class Appointments extends EA_Controller {
             $website_logo = $this->settings_model->get_setting('website_logo');
             $website_title = $this->settings_model->get_setting('website_title');
             $website_description = $this->settings_model->get_setting('website_description');
-            $website_images = json_decode($this->settings_model->get_setting('website_images'), true);
             $website_theme_color = $this->settings_model->get_setting('theme_color');
             $seo_title = $this->settings_model->get_setting('seo_title');
             $seo_description = $this->settings_model->get_setting('seo_description');
@@ -91,6 +90,16 @@ class Appointments extends EA_Controller {
             $admin = $this->admins_model->get_batch()[0];
             $company_working_plan = json_decode($this->settings_model->get_setting('company_working_plan'), true);
             $text_color = $website_theme_color === 'warning' || $website_theme_color === 'light' ? 'dark' : 'white';
+
+            $website_images_url = $this->settings_model->get_setting('website_images');
+            preg_match_all('!\d+!', $website_images_url, $matches);
+            $matches = $matches[0];
+            $website_images = [];
+            if (! empty($matches)) {
+                for ($i = 0; $i < end($matches); $i++) {
+                    array_push($website_images, $website_images_url . "/nth/" . $i . "/");
+                }
+            }
 
             // Remove the data that are not needed inside the $available_providers array.
             foreach ($available_providers as $index => $provider)
@@ -303,7 +312,6 @@ class Appointments extends EA_Controller {
             $website_logo = $this->settings_model->get_setting('website_logo');
             $website_title = $this->settings_model->get_setting('website_title');
             $website_description = $this->settings_model->get_setting('website_description');
-            $website_images = json_decode($this->settings_model->get_setting('website_images'), true);
             $website_theme_color = $this->settings_model->get_setting('theme_color');
             $font_family = $this->settings_model->get_setting('font_family');
             $seo_title = $this->settings_model->get_setting('seo_title');
@@ -315,6 +323,16 @@ class Appointments extends EA_Controller {
             $admin = $this->admins_model->get_batch()[0];
             $company_working_plan = json_decode($this->settings_model->get_setting('company_working_plan'), true);
             $text_color = $website_theme_color === 'warning' || $website_theme_color === 'light' ? 'dark' : 'white';
+
+            $website_images_url = $this->settings_model->get_setting('website_images');
+            preg_match_all('!\d+!', $website_images_url, $matches);
+            $matches = $matches[0];
+            $website_images = [];
+            if (! empty($matches)) {
+                for ($i = 0; $i < end($matches); $i++) {
+                    array_push($website_images, $website_images_url . "/nth/" . $i . "/");
+                }
+            }
 
             $settings = [
                 'company_name' => $this->settings_model->get_setting('company_name'),
@@ -397,7 +415,6 @@ class Appointments extends EA_Controller {
         $website_logo = $this->settings_model->get_setting('website_logo');
         $website_title = $this->settings_model->get_setting('website_title');
         $website_description = $this->settings_model->get_setting('website_description');
-        $website_images = json_decode($this->settings_model->get_setting('website_images'), true);
         $website_theme_color = $this->settings_model->get_setting('theme_color');
         $font_family = $this->settings_model->get_setting('font_family');
         $seo_title = $this->settings_model->get_setting('seo_title');
@@ -409,6 +426,16 @@ class Appointments extends EA_Controller {
         $admin = $this->admins_model->get_batch()[0];
         $company_working_plan = json_decode($this->settings_model->get_setting('company_working_plan'), true);
         $text_color = $website_theme_color === 'warning' || $website_theme_color === 'light' ? 'dark' : 'white';
+        $website_images_url = $this->settings_model->get_setting('website_images');
+        preg_match_all('!\d+!', $website_images_url, $matches);
+        $matches = $matches[0];
+        $website_images = [];
+        if (! empty($matches)) {
+            for ($i = 0; $i < end($matches); $i++) {
+                array_push($website_images, $website_images_url . "/nth/" . $i . "/");
+            }
+        }
+
 
         $customer = $this->customers_model->get_row($appointment['id_users_customer']);
 

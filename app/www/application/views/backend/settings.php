@@ -1,6 +1,6 @@
 <link rel="stylesheet"
  href="https://fonts.googleapis.com/css?family=Roboto|Lato|Montserrat|Merriweather|Bitter|Lora|Inconsolata|Kalam">
-<script src="https://ucarecdn.com/libs/widget/3.x/uploadcare.min.js"></script>
+<script src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js"></script>
 <script src="https://ucarecdn.com/libs/widget-tab-effects/1.x/uploadcare.tab-effects.min.js"></script>
 <style>
     .uploadcare--widget__button.uploadcare--widget__button_type_open {
@@ -8,22 +8,23 @@
     }
 </style>
 <script>
-    uploadcare.registerTab('preview', uploadcareTabEffects)
+    uploadcare.registerTab('preview', uploadcareTabEffects);
+    UPLOADCARE_LOCALE = "ca";
     UPLOADCARE_LOCALE_TRANSLATIONS = {
         buttons: {
             choose: {
                 images: {
-                    one: "<?= lang('choose_image') ?>"
+                    one: "<?= lang('choose_image') ?>",
+                    other: "<?= lang('choose_images') ?>"
                 }
             }
         }
-    }
+    };
 </script>
 <script src="<?= asset_url('assets/js/backend_settings_system.js') ?>"></script>
 <script src="<?= asset_url('assets/js/backend_settings_user.js') ?>"></script>
 <script src="<?= asset_url('assets/js/backend_settings.js') ?>"></script>
 <script src="<?= asset_url('assets/js/working_plan.js') ?>"></script>
-<script src="<?= asset_url('assets/js/website_images.js') ?>"></script>
 <script src="<?= asset_url('assets/ext/jquery-ui/jquery-ui-timepicker-addon.min.js') ?>"></script>
 <script src="<?= asset_url('assets/ext/jquery-jeditable/jquery.jeditable.min.js') ?>"></script>
 <script>
@@ -57,7 +58,7 @@
     <ul class="nav nav-pills">
         <?php if ($privileges[PRIV_SYSTEM_SETTINGS]['view'] == TRUE): ?>
             <li class="nav-item">
-                <a class="nav-link" href="#general" data-toggle="tab"><?= lang('general') ?></a>
+                <a class="nav-link active" href="#general" data-toggle="tab"><?= lang('general') ?></a>
             </li>
         <?php endif ?>
         <?php if ($privileges[PRIV_SYSTEM_SETTINGS]['view'] == TRUE): ?>
@@ -326,53 +327,55 @@
 
                             <div class="form-group">
                                 <label for="website-logo"><?= lang('website_logo') ?> *</label>
+                                <span class="form-text text-muted">
+                                    <?= lang('website_logo_hint') ?>
+                                </span>
+                                <br/>
                                 <input
                                     id="website-logo"
+                                    data-field="website_logo"
                                     type="hidden"
                                     role="uploadcare-uploader"
                                     data-public-key="8fa0bc9e7f65bd03a8d0"
                                     data-images-only="true"
-                                    data-tabs="file"
+                                    data-tabs=""file facebook gdrive gphotos""
                                     data-effects="crop, flip, enhance, grayscale, blur, rotate, mirror, sharp, invert"
                                 />
-                                <span class="form-text text-muted">
-                                    <?= lang('website_logo_hint') ?>
-                                </span>
                             </div>
                             <div class="form-group">
                                 <label for="font-family"><?= lang('font_family') ?> *</label>
                                 <div class="list-group">
                                     <label class="list-group-item">
-                                        <input class="form-check-input me-1" name="font-family" type="radio" value="Roboto" style="font-family: Roboto;" aria-label="Selecciona fuente Roboto">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        <input class="form-check-input me-1" name="font-family" type="radio" value="Roboto" aria-label="Selecciona fuente Roboto">
+                                        <span style="font-family: Roboto;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
                                     </label>
                                     <label class="list-group-item">
-                                        <input class="form-check-input me-1" name="font-family" type="radio" value="Lato" style="font-family: Lato;" aria-label="Selecciona fuente Lato">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        <input class="form-check-input me-1" name="font-family" type="radio" value="Lato" aria-label="Selecciona fuente Lato">
+                                        <span style="font-family: Lato;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
                                     </label>
                                     <label class="list-group-item">
-                                        <input class="form-check-input me-1" name="font-family" type="radio" value="Montserrat" style="font-family: Montserrat;" aria-label="Selecciona fuente Montserrat">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        <input class="form-check-input me-1" name="font-family" type="radio" value="Montserrat" aria-label="Selecciona fuente Montserrat">
+                                        <span style="font-family: Montserrat;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
                                     </label>
                                     <label class="list-group-item">
-                                        <input class="form-check-input me-1" name="font-family" type="radio" value="Merriweather" style="font-family: Merriweather;" aria-label="Selecciona fuente Merriweather">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        <input class="form-check-input me-1" name="font-family" type="radio" value="Merriweather" aria-label="Selecciona fuente Merriweather">
+                                        <span style="font-family: Merriweather;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
                                     </label>
                                     <label class="list-group-item">
-                                        <input class="form-check-input me-1" name="font-family" type="radio" value="Bitter" style="font-family: Bitter;" aria-label="Selecciona fuente Bitter">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        <input class="form-check-input me-1" name="font-family" type="radio" value="Bitter" aria-label="Selecciona fuente Bitter">
+                                        <span style="font-family: Bitter;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
                                     </label>
                                     <label class="list-group-item">
-                                        <input class="form-check-input me-1" name="font-family" type="radio" value="Lora" style="font-family: Lora;" aria-label="Selecciona fuente Lora">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        <input class="form-check-input me-1" name="font-family" type="radio" value="Lora" aria-label="Selecciona fuente Lora">
+                                        <span style="font-family: Lora;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
                                     </label>
                                     <label class="list-group-item">
-                                        <input class="form-check-input me-1" name="font-family" type="radio" value="Inconsolata" style="font-family: Inconsolata;" aria-label="Selecciona fuente Inconsolata">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        <input class="form-check-input me-1" name="font-family" type="radio" value="Inconsolata" aria-label="Selecciona fuente Inconsolata">
+                                        <span style="font-family: Inconsolata;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
                                     </label>
                                     <label class="list-group-item">
-                                        <input class="form-check-input me-1" name="font-family" type="radio" value="Kalam" style="font-family: Kalam;" aria-label="Selecciona fuente Kalam">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        <input class="form-check-input me-1" name="font-family" type="radio" value="Kalam" aria-label="Selecciona fuente Kalam">
+                                        <span style="font-family: Kalam;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
                                     </label>
                                 </div>
                             </div>
@@ -412,31 +415,24 @@
                             </div>
                         </div>
                         <div class="col-12 col-sm-5 breaks-wrapper">
-                            <h4><?= lang('website_images') ?></h4>
-
-                            <span class="form-text text-muted">
-                                <?= lang('website_images_hint') ?>
-                            </span>
-
-                            <div class="mt-2">
-                                <button type="button" class="add-website-image btn btn-primary">
-                                    <i class="fas fa-plus-square"></i>
-                                    <?= lang('add_image'); ?>
-                                </button>
+                            <div class="form-group">
+                                <label for="website-images"><?= lang('website_images') ?></label>
+                                <span class="form-text text-muted">
+                                    <?= lang('website_images_hint') ?>
+                                </span>
+                                <br/>
+                                <input
+                                    id="website-images"
+                                    data-field="website_images"
+                                    type="hidden"
+                                    role="uploadcare-uploader"
+                                    data-public-key="8fa0bc9e7f65bd03a8d0"
+                                    data-multiple="true"
+                                    data-images-only="true"
+                                    data-tabs="file facebook gdrive gphotos"
+                                    data-effects="crop, flip, enhance, grayscale, blur, rotate, mirror, sharp, invert"
+                                />
                             </div>
-
-                            <br>
-
-                            <table class="website-images table table-striped">
-                                <thead>
-                                <tr>
-                                    <th><?= lang('link') ?></th>
-                                    <th><?= lang('image') ?></th>
-                                    <th><?= lang('actions') ?></th>
-                                </tr>
-                                </thead>
-                                <tbody><!-- Dynamic Content --></tbody>
-                            </table>
 
                             <div class="form-group">
                                 <label for="company-instagram-link"><?= lang('company_instagram_link') ?></label>

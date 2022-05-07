@@ -36,7 +36,7 @@ class Migration_Add_website_settings extends CI_Migration {
         ]);
         $this->db->insert('settings', [
             'name' => 'website_images',
-            'value' => '{}'
+            'value' => ''
         ]);
         $this->db->insert('settings', [
             'name' => 'theme_color',

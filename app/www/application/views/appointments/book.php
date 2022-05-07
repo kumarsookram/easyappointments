@@ -75,7 +75,7 @@
 </head>
 
 <body>
-<nav class="navbar text-<?= $text_color ?> bg-<?= $website_theme_color ?> px-md-5">
+<nav class="navbar text-<?= $text_color ?> bg-<?= $website_theme_color ?> px-md-5 shadow-lg">
     <!-- Navbar content -->
     <div class="col-md-4 col-6">
         <a class="navbar-brand" href="/">
@@ -583,7 +583,7 @@
 <section class="bg-light">
     <div class="container pt-2 pb-5">
         <div class="row justify-content-around align-items-center">
-            <div class="col-lg-3 col-md-5 col-sm-8 col-9">
+            <div class="col-xl-3 col-lg-4 col-md-5 col-sm-7 col-8">
                 <h3 class="text-center mb-3"><i class="fa-solid fa-clock mr-2"></i><?= lang('schedule') ?></h3>
                 <?php foreach ($company_working_plan as $day => $wp): ?>
                     <div class="row">
@@ -619,15 +619,15 @@
 </section>
 
 <!-- FOOTER -->
-<section class="bg-<?= $website_theme_color ?> text-<?= $text_color ?> pt-3 pb-2">
+<section class="bg-<?= $website_theme_color ?> text-<?= $text_color ?> pt-3 pb-2" style="box-shadow: 0 -1rem 3rem rgba(0,0,0,.175);">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-3 col-sm-6 text-center">
+            <div class="col-lg-3 col-md-5 col-sm-6 col-10 mb-3 text-center">
                 <a href="/">
-                    <img src="<?= $website_logo ?>"  height="130" alt="<?= 'Logo de ' . $company_name ?>" loading="lazy">
+                    <img src="<?= $website_logo ?>" class="img-fluid" height="130" alt="<?= 'Logo de ' . $company_name ?>" loading="lazy">
                 </a>
             </div>
-            <div class="col-md-8 col-sm-12 col-10">
+            <div class="col-lg-8 col-md-7 col-sm-12 col-10">
                 <div class="row">
                     <a class="text-<?= $text_color ?>" style="text-decoration: none;" href="<?= $company_link ?>"><h1><?= $company_name ?></h1></a>
                 </div>
