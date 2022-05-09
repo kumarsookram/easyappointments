@@ -77,12 +77,12 @@
 <body>
 <nav class="navbar text-<?= $text_color ?> bg-<?= $website_theme_color ?> px-md-5 shadow-lg">
     <!-- Navbar content -->
-    <div class="col-md-4 col-6">
+    <div class="col-lg-4 col-md-3 col-6">
         <a class="navbar-brand" href="/">
             <img src="<?= $website_logo ?>"  height="80" alt="Logo de <?= $company_name ?>" loading="lazy">
         </a>
     </div>
-    <div class="col-md-4 col-6 text-center py-3">
+    <div class="col-lg-4 col-md-5 col-6 text-center py-3">
         <h1><?= $company_name ?></h1>
         <h5 class="d-none d-md-block"><?= $website_description ?></h5>
     </div>
@@ -130,7 +130,7 @@
     <div class="container">
         <div class="row align-items-center pt-5" style="min-height: 450px;">
             <div class="col-lg-6 d-md-none d-lg-block text-lg-left text-center pl-lg-5 pb-5">
-                <h1 style="font-size: 5rem;"><?= $website_title ?></h1>
+                <h1 style="font-size: 4rem; overflow-wrap: break-word;"><?= $website_title ?></h1>
                 <h3 class="text-muted mb-5"><?= $website_description ?></h3>
             </div>
             <div class="col-lg-6 col-md-12">
@@ -622,7 +622,7 @@
 <section class="bg-<?= $website_theme_color ?> text-<?= $text_color ?> pt-3 pb-2" style="box-shadow: 0 -1rem 3rem rgba(0,0,0,.175);">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-3 col-md-5 col-sm-6 col-10 mb-3 text-center">
+            <div class="col-lg-2 col-md-4 col-sm-6 col-10 mb-3 text-center">
                 <a href="/">
                     <img src="<?= $website_logo ?>" class="img-fluid" height="130" alt="<?= 'Logo de ' . $company_name ?>" loading="lazy">
                 </a>
