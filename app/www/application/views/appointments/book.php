@@ -77,13 +77,13 @@
 <body>
 <nav class="navbar text-<?= $text_color ?> bg-<?= $website_theme_color ?> px-md-5 shadow-lg">
     <!-- Navbar content -->
-    <div class="col-lg-4 col-md-3 col-6">
+    <div class="col-lg-4 col-md-3 col-4">
         <a class="navbar-brand" href="/">
             <img src="<?= $website_logo ?>"  height="80" alt="Logo de <?= $company_name ?>" loading="lazy">
         </a>
     </div>
-    <div class="col-lg-4 col-md-5 col-6 text-center py-3">
-        <h1><?= $company_name ?></h1>
+    <div class="col-lg-4 col-md-5 col-8 text-center py-3">
+        <h4 style="font-weight: 800;"><?= $company_name ?></h4>
         <h5 class="d-none d-md-block"><?= $website_description ?></h5>
     </div>
     <div class="col-md-4 d-none d-md-block">
@@ -130,7 +130,7 @@
     <div class="container">
         <div class="row align-items-center pt-5" style="min-height: 450px;">
             <div class="col-lg-6 d-md-none d-lg-block text-lg-left text-center pl-lg-5 pb-5">
-                <h1 style="font-size: 4rem; overflow-wrap: break-word;"><?= $website_title ?></h1>
+                <h1 style="font-size: 3rem; overflow-wrap: break-word;"><?= $website_title ?></h1>
                 <h3 class="text-muted mb-5"><?= $website_description ?></h3>
             </div>
             <div class="col-lg-6 col-md-12">
@@ -583,7 +583,7 @@
 <section class="bg-light">
     <div class="container pt-2 pb-5">
         <div class="row justify-content-around align-items-center">
-            <div class="col-xl-3 col-lg-4 col-md-5 col-sm-7 col-8">
+            <div class="col-xl-3 col-lg-4 col-md-5 col-sm-7 col-9">
                 <h3 class="text-center mb-3"><i class="fa-solid fa-clock mr-2"></i><?= lang('schedule') ?></h3>
                 <?php foreach ($company_working_plan as $day => $wp): ?>
                     <div class="row">
