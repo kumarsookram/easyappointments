@@ -622,7 +622,7 @@
 <section class="bg-<?= $website_theme_color ?> text-<?= $text_color ?> pt-3 pb-2" style="box-shadow: 0 -1rem 3rem rgba(0,0,0,.175);">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-2 col-md-4 col-sm-6 col-10 mb-3 text-center">
+            <div class="col-lg-2 col-md-4 col-sm-6 col-8 mb-3 text-center">
                 <a href="/">
                     <img src="<?= $website_logo ?>" class="img-fluid" height="130" alt="<?= 'Logo de ' . $company_name ?>" loading="lazy">
                 </a>
@@ -635,16 +635,16 @@
                 <div class="row">
                     <div class="col">
                         <?php if (isset($admin['mobile_number']) && $admin['mobile_number'] !== ''): ?>
-                            <div class="row mt-2 align-items-center"><i class="fab fa-whatsapp mr-2"></i><?= $admin['mobile_number'] ?></div>
+                            <div class="row mt-2 align-items-center"><div><i class="fab fa-whatsapp mr-2"></i><?= $admin['mobile_number'] ?></div></div>
                         <?php endif ?>
                         <?php if (isset($admin['phone_number']) && $admin['phone_number'] !== ''): ?>
-                            <div class="row mt-2 align-items-center"><i class="fas fa-phone-alt mr-2"></i><?= $admin['phone_number'] ?></div>
+                            <div class="row mt-2 align-items-center"><div><i class="fas fa-phone-alt mr-2"></i><?= $admin['phone_number'] ?></div></div>
                         <?php endif ?>
                         <?php if (isset($admin['email']) && $admin['email'] !== ''): ?>
-                            <div class="row mt-2 align-items-center"><i class="fas fa-envelope mr-2"></i><?= $admin['email'] ?></div>
+                            <div class="row mt-2 align-items-center"><div><i class="fas fa-envelope mr-2"></i><?= $admin['email'] ?></div></div>
                         <?php endif ?>
                         <?php if (isset($admin['address']) && $admin['address'] !== ''): ?>
-                            <div class="row mt-2 align-items-center"><i class="fa-solid fa-building mr-2"></i><?= $admin['address'] . ', ' . $admin['zip_code'] . ' ' . $admin['city'] ?></div>
+                            <div class="row mt-2 align-items-center"><div><i class="fa-solid fa-building mr-2"></i><?= $admin['address'] . ', ' . $admin['zip_code'] . ' ' . $admin['city'] ?></div></div>
                         <?php endif; ?>
                     </div>
                 </div>
