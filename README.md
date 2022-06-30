@@ -1,4 +1,4 @@
-# elKaribu Easy!Appointments
+# AgendaFacil
 
 Imatge Docker per l'ús de [Easy!Appointments](https://easyappointments.org/), un sistema de gestió de clients i reserves online. A més, s'inclou una pàgina web funcional per a 
 qualsevol tipus d'establiment.

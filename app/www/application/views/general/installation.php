@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
-    <title>Instal·lació | Easy!Appointments</title>
+    <title>Instal·lació | AgendaFacil</title>
 
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Roboto|Lato|Montserrat|Merriweather|Bitter|Lora|Inconsolata|Kalam">
@@ -33,13 +33,13 @@
 
 <header>
     <div class="container">
-        <h1 class="page-title">Instal·lació Easy!Appointments</h1>
+        <h1 class="page-title">Instal·lació AgendaFacil</h1>
     </div>
 </header>
 
 <div class="content container">
     <div class="welcome">
-        <h3>Benvinguts a la pàgina d'instal·lació de Easy!Appointments.</h3>
+        <h3>Benvinguts a la pàgina d'instal·lació de AgendaFacil.</h3>
         <p>
             Aquesta pàgina us ajudarà a configurar els principals paràmetres de la pàgina.
             Podreu editar tots aquests paràmetres i molts més a la pàgina d'administradors del sistema.
@@ -236,15 +236,15 @@
 
     <button type="button" id="install" class="btn btn-success btn-large">
         <i class="icon-white icon-ok mr-2"></i>
-        Instal·lar Easy!Appointments
+        Instal·lar AgendaFacil
     </button>
 
     <br/>
 
     <p>
     <h3>Llicència</h3>
-    Easy!Appointments té una llicència <span class="badge badge-default">GPL-3.0</span>.
-    A l'utilitzar el programa Easy!Appointments en qualsevol forma <br/> vostè acceptarà els terminis descrits
+    AgendaFacil té una llicència <span class="badge badge-default">GPL-3.0</span>.
+    A l'utilitzar el programa AgendaFacil en qualsevol forma <br/> vostè acceptarà els terminis descrits
     en el següent enllaç:
     <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">https://www.gnu.org/licenses/gpl-3.0.en.html</a>
     </p>

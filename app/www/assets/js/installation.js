@@ -51,7 +51,7 @@ $(function () {
         })
             .done(function (response) {
                 $alert
-                    .text('Easy!Appointments has been successfully installed!')
+                    .text("AgendaFacil s'ha instal·lat correctament!")
                     .addClass('alert-success')
                     .removeClass('hidden');
 

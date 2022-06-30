@@ -1,6 +1,6 @@
 captainVersion: 4
 services:
-    # elKaribu Easy!Appointments
+    # AgendaFacil
     $$cap_appname:
         depends_on:
             - $$cap_appname-db
@@ -91,7 +91,7 @@ caproverOneClickApp:
 
     instructions:
         start: >-
-            elKaribu Easy!Appointments is an open source basic website for little businesses.
+            AgendaFacil is an open source basic website for little businesses.
         end: >-
             Done! 😄
             Your service is available at http://$$cap_appname.$$cap_root_domain
