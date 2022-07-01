@@ -12,7 +12,7 @@ catalog:
     - variable: timezone
       label: Timezone
       type: string
-      default: UTC
+      default: Europe/Madrid
       required: true
     - variable: version
       label: Version
