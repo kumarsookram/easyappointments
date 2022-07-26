@@ -366,7 +366,7 @@
                                 <div id="select-time">
                                     <div class="form-group" style="display: none;">
                                         <label for="select-timezone"><?= lang('timezone') ?></label>
-                                        <?= render_timezone_dropdown('id="select-timezone" class="form-control" value="Europe/Madrid"'); ?>
+                                        <?= render_timezone_dropdown('id="select-timezone" class="form-control" value="America/Port_of_Spain"'); ?>
                                     </div>
                                     <div id="available-hours"></div>
                                 </div>
