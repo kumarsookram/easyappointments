@@ -499,7 +499,7 @@ class Timezones {
      */
     public function get_default_timezone()
     {
-        return 'Europe/Madrid';
+        return 'America/Port_of_Spain';
     }
 
     /**
